@@ -1,3 +1,6 @@
+<?php require '../Models/Form_element.php';
+      require 'nav.php';
+?>
 <!doctype html>
 <html lang="en">
 
@@ -8,96 +11,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col-md-3 mt-3">
-        <img src="placeholder.com-logo2.png" class="w-100 h-100">
-      </div>
-      <div class="col-md-9 mt-3">
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Acceuil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Connection</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Location</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+ <?php include 'nav.php'; ?>
 
     <form method="POST" action="">
       <div class="row mt-3">
         <div class="col-md-6">
           <div class="col-12 form-group">
-            <label for="inputEmail">Email </label>
-            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-              placeholder="jean@pierre.fr">
-
+            <?php
+            $inputEmail = new Form_element();
+            echo $mail = $inputEmail->inputText("inputEmail", "email", "jean@pierre.fr", "", "Email");
+            ?>
           </div>
           <div class="col-12 form-group">
-            <label for="inputPassword">Mot de passe</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
+            <?php
+            $inputMotdepasse = new Form_element();
+            echo $motdepasse = $inputMotdepasse->inputText("inputPassword", "password", "Mot de passe", "", "Mot de passe");
+            ?>
           </div>
 
           <div class="col-12 form-group">
-            <label for="inputPassword2">Confirmation de votre mot de passe</label>
-            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+            <?php
+            $inputMotdepasse2 = new Form_element();
+            echo $motdepasse2 = $inputMotdepasse2->inputText("inputPassword2", "password", "Password", "", "Confirmation de votre mot de passe");
+            ?>
           </div>
         </div>
         <div class="col-md-6">
           <div class="col-12 form-group">
-            <label for="inputName">Nom</label>
-            <input type="text" class="form-control" id="inputName" placeholder="Nom">
+            <?php
+            $inputName = new Form_element();
+            echo $name = $inputName->inputText("inputName", "text", "Nom", "", "Nom");
+            ?>
           </div>
 
           <div class=" col-md-12 form-group">
-            <label for="inputPrenom">Prénom</label>
-            <input type="text" class="form-control" id="inputPrenom" placeholder="Prénom">
+            <?php
+            $inputPrenom = new Form_element();
+            echo $prenom = $inputPrenom->inputText("inputPrenom", "text", "Prénom", "", "Prénom");
+            ?>
           </div>
 
           <div class="col-md-12 form-group">
-            <label for="inputAnniv">Date de naissance</label>
-            <input type="date" class="form-control" name="inputAnniv" id="inputAnniv">
+            <?php
+            $inputAnniv = new Form_element();
+            echo $anniv = $inputAnniv->inputText("inputAnniv", "date", "", "", "Date de naissance");
+            ?>
           </div>
 
           <div class="col-md-12 form-group">
-            <label for="inputTel">N° de téléphone</label>
-            <input type="text" class="form-control" id="inputTel" placeholder="0123456789">
+            <?php
+            $inputTel = new Form_element();
+            echo $tel = $inputTel->inputText("inputTel", "text", "0123456789", "", "N° de téléphone");
+            ?>
           </div>
         </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-6">
           <div class=" col-12 form-group">
-            <label for="inputAdresse">Adresse 1</label>
-            <input type="text" class="form-control" id="inputAdresse" placeholder="25 rue de Paris">
+            <?php
+            $inputAdresse = new Form_element();
+            echo $adresse = $inputAdresse->inputText("inputAdresse", "text", "25 rue de Paris", "", "Adresse 1");
+            ?>
           </div>
 
           <div class="col-12 form-group">
-            <label for="inputAdresse2">Adresse 2</label>
-            <input type="text" class="form-control" id="inputAdresse2" placeholder="25 rue de Paris">
+            <?php
+            $inputAdresse2 = new Form_element();
+            echo $adresse2 = $inputAdresse2->inputText("inputAdresse", "text", "25 rue de Paris", "", "Adresse 2");
+            ?>
           </div>
         </div>
         <div class="col-md-6">
           <div class="col-12 form-group">
-            <label for="inputVille">Ville</label>
-            <input type="text" class="form-control" id="inputVille" placeholder="Paris">
+            <?php
+            $inputVille = new Form_element();
+            echo $ville = $inputVille->inputText("inputVille", "text", "Paris", "", "Ville");
+            ?>
+
           </div>
 
           <div class="col-12 form-group">
-            <label for="inputCp">Code Postal</label>
-            <input type="text" class="form-control" id="inputCp" placeholder="12345">
+            <?php
+            $inputCp = new Form_element();
+            echo $cp = $inputCp->inputText("inputCp", "text", "12345", "", "Code Postal");
+            ?>
           </div>
         </div>
-        <div class="col-md-3">
+        <!--<div class="col-md-3">
         <div class="form-group mb-3">
 
           <label class="input-group-text" for="inputVilleLoc">Ville de location</label>
@@ -109,14 +114,16 @@
             <option value="3">Marseille</option>
             <option value="4">Paris</option>
           </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>-->
+        <?php
+        $button = new Form_element();
+        echo $but = $button->inputButton("btn btn-primary", "Envoyer");
+        ?>
       </div>
     </form>
   </div>
-  </div>
-  </div>
+  
+  
 
 
 
@@ -125,19 +132,13 @@
 
 
 
-  </div>
+  
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
