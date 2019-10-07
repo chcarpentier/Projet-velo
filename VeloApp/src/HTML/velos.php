@@ -1,41 +1,14 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <title>Title</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
+<?php
+// require 'nav.php';
+?>
   <div class="container">
-    <div class="row mt-3">
-      <div class="col-md-3 mt-3">
-        <img src="placeholder.com-logo2.png" class="w-100 h-100">
-      </div>
-      <div class="col-md-9 mt-3">
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Acceuil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Connection</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Location</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+   
     <div class="row mt-3">
       <div class="col-md-4 offset-md-2">
         <div class="card">
           <img src="400C.png" class="card-img-top" alt="...">
           <div class="card-body">
+            
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
